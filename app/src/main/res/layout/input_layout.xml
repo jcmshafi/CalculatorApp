@@ -1,8 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/black">
+    android:background="@color/black"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/inputTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text=""
+        android:fontFamily="@font/g_light"
+        android:background="@color/black"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:gravity="end"
+        />
+
+    <TextView
+        android:id="@+id/outputTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="60sp"
+        android:text=""
+        android:background="@color/black"
+        android:padding="10dp"
+        android:fontFamily="@font/g_light"
+        android:textColor="@color/white"
+        android:gravity="end"
+        />
 
 </LinearLayout>
