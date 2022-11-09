@@ -12,7 +12,7 @@ import org.mozilla.javascript.Scriptable;
 
 public class MainActivity extends AppCompatActivity {
     TextView inputTv, outputTv;
-    Button btn0,btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btnPercent,btnPlus,btnMinus,btnMultiply,btnDivision,btnEqual,btnClear,btnDot,btnBracket;
+    Button btn0,btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btnPercent,btnPlus,btnMinus,btnMultiply,btnDivision,btnEqual,btnClear,btnBack,btnDot,btnBracket;
     String tamp;
     boolean checkBracket = false;
     @Override
@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         btn9 = findViewById(R.id.btn9);
 
         btnClear = findViewById(R.id.btnClear);
+        btnBack = findViewById(R.id.btnBack);
 
         btnPlus = findViewById(R.id.btnPlus);
         btnMinus = findViewById(R.id.btnMinus);
@@ -59,6 +60,17 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 inputTv.setText("");
                 outputTv.setText("");
+            }
+        });
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tamp = inputTv.getText().toString();
+                if (tamp.length() != 0){
+                    tamp = tamp.substring(0, tamp.length()-1);
+                    inputTv.setText(tamp);
+                }
+
             }
         });
 
